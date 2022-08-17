@@ -187,9 +187,13 @@ potionList.addEventListener("click", (event) => {
   const dataPotionId = eventTarget.parentNode.getAttribute("data-potion-id");
 
   if( potionCard || potionImg || potionP ){
-    console.log(dataPotionId)
-    // lightBox.style.display = "flex";
-    
+    // console.log(dataPotionId)
+    for(let i in potionJson.potions){
+      if(potionJson.potions[i].id == dataPotionId){
+          console.log(potionJson.potions[i])
+      }
+      // console.log(potionJson.potions[i].id)
+    }  
 
   }
 
