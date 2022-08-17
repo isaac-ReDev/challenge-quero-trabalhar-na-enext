@@ -1,5 +1,6 @@
-const potionList  = document.querySelector(".potion-list");
-const btnShowMenu = document.querySelector('[data-btn="btn-show-menu"]');
+const potionList       = document.querySelector(".potion-list");
+const btnShowMenu      = document.querySelector('[data-btn="btn-show-menu"]');
+const btnCloseLightBox = document.querySelector('[data-js-btn-close-lightBox]');
 
 const lightBox    = document.querySelector(".light-box");
 
@@ -164,6 +165,7 @@ for(let inde = 0; inde<6; ){
 
 // potionList.appendChild(li)
 
+//** ADD EVENT LISTENERS */
 
 //* show menu on click 
 btnShowMenu.addEventListener("click", () => {
@@ -176,6 +178,11 @@ btnShowMenu.addEventListener("click", () => {
   
   
 })
+
+//*  event on click in the icon X */
+btnCloseLightBox.addEventListener("click", () => {
+  showLightBox("none")
+} )
 
 //* active lightBox 
 potionList.addEventListener("click", (event) => {
@@ -190,8 +197,9 @@ potionList.addEventListener("click", (event) => {
     // console.log(dataPotionId)
     for(let i in potionJson.potions){
       if(potionJson.potions[i].id == dataPotionId){
-          console.log(potionJson.potions[i])
-          showLightBox()
+          // console.log(potionJson.potions[i])
+          desiredPotion(dataPotionId);
+          showLightBox("flex")
       }
     }  
 
@@ -201,7 +209,51 @@ potionList.addEventListener("click", (event) => {
 
 
 //* show lightbox
-function showLightBox(){
-  lightBox.style.display = "flex";
+function showLightBox(state){
+  lightBox.style.display = state;
+}
+
+
+//* show desired potion */
+function desiredPotion(idPotion){
+  const potionContainer = document.querySelector(".show-here-a-potion");
+  potionContainer.innerHTML = `
+  <li class="potion-item " data-potion-id="${potionJson.potions[idPotion].id}">
+   <img class="potion-img" src="${potionJson.potions[idPotion].image}" alt="potion"/>
+   <div class="potion-description">
+    <p class="potion-name">${potionJson.potions[idPotion].name}</p>
+    <p>Use/effect:</p>
+    <p>${potionJson.potions[idPotion].effect}</p>
+    <span class="list-ingredients" >${returnIngredients(idPotion)}</span>
+    <p class="potin-price">$${potionJson.potions[idPotion].price}</p>
+   </div>
+    
+   </li>   
+   `
+}
+
+
+
+function returnIngredients(id ){
+  const potionIngredients = potionJson.potions[id].ingredients
+  const NewUlOfIngredients = document.createElement("ul")
+  const NewLiOfIngredients = document.createElement("li")
+  const ingredientsLenght = potionJson.potions[id].ingredients.length
+
+  for(let i =0; i < ingredientsLenght; i++ ){
+      // console.log(potionIngredients[i])
+      // console.log(potionIngredients[i])
+      NewUlOfIngredients.innerHTML += `
+        <li>${potionIngredients[i]}</li>
+      `
+      
+
+
+  }
+  // console.log(NewUlOfIngredientschildNodes)
+  // console.log(NewUlOfIngredients
+  // console.log(NewUlOfIngredients)
+ 
+  return NewUlOfIngredients.outerHTML
 }
 
