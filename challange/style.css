@@ -1,0 +1,277 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+}   
+
+.header-page{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 20vh;
+    background-color: transparent;
+}
+
+.ul-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: transparent;
+    height: 7rem;
+}
+
+
+/** style of the store name */
+.store-name{
+    display: flex;  
+    flex-direction: column ;
+    text-align: center;
+    color: rgb(187, 15, 15);
+    background-color: transparent;
+    width: 14rem;
+    font-size: 1.2rem;
+}
+
+.store-name-description{
+    color: rgba(100, 99, 99, 0.568);
+}
+
+
+@media (max-width: 600px){
+    /** hidden the input search */
+    .ul-header input{
+        display: none;
+    }
+
+    
+    .ul-header li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(186, 162, 162);
+        color: rgb(81, 83, 85);
+        order: 4;
+        width: 100%;
+        height:2rem;
+
+    }
+
+    .item-bag{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: transparent;
+        width: 5rem;
+        height: 3rem;
+    }
+    /** icon bag */
+    .ri-shopping-bag-2-line{
+        color: purple;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    .ri-menu-line{
+        font-size: 3rem;
+        background-color: transparent;
+        font-weight: bold;
+        color: black;
+    }
+
+
+    /** style of the store name */
+    .store-name{
+        display: flex;  
+        flex-direction: column ;
+        text-align: center;
+        color: rgb(187, 15, 15);
+        background-color: transparent;
+        width: 14rem;
+        font-size: 1.5rem;
+    }
+
+    .store-name-description{
+        color: rgba(100, 99, 99, 0.568);
+        font-size: 0.9rem;
+    }
+
+    .hidden-in-smartphone{
+        display:none;
+    }
+
+    /** style buttons navegayions 
+    .buttons-navegations{
+        position: absolute;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        background-color: purple;
+        width: 100%;
+        height: 200px;
+        top: 20px;
+    }
+
+    */
+
+    .buttons-navegations select{
+        border: none;
+        background-color: transparent;  
+    }
+    
+    
+
+
+    /** style main container */
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /** Potios style */
+
+    .potion-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    .potion-item{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 10rem;
+        background-color: transparent;
+    }
+
+    .potion-img{
+        width: 130px;
+        height: 130px;
+    }
+
+    .potion-name{
+        font-size: 0.8rem;
+    }
+
+    .potin-price{
+        color: rgb(155, 69, 69);
+    }
+
+    /** style form newslatter */
+    .newletter-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(152, 152, 152);
+        padding: 20px;
+        width: 100%;
+        padding : 10px;
+        margin-top: 10px;
+    }
+
+    .box-newslatter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+        background-color: white;
+        width: 90%;
+    }
+
+    .info-newslatter{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 0.8rem;
+        padding-top:10px ;
+    }
+
+    .form-newslatter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background-color: transparent;
+        padding-bottom:10px ;
+
+    }
+    
+    .form-newslatter > button{
+        background-color: tomato;
+        border: none;
+        border-radius: 7px;
+        font-size: 0.7rem;
+        padding: 7px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .form-newslatter > input{
+        outline: none;
+        border-radius: 5px;
+        padding: 5px;
+
+    }
+
+    /**  style content social medias */
+    .content-social-medias{
+        padding-top: 20px;    
+        padding-bottom: 20px;    
+    }
+
+    /**  footer style on small screens  */
+    .footer-page{
+        display: flex;        
+        flex-direction: column;
+    }
+
+    /** shodden more info on small screens */
+    .more-info{
+        display: none   ;
+    }
+
+    /** style message copyright */
+    .info-copyright{
+        margin: 20px;
+        color: rgba(0, 0, 0, 0.591);
+    }
+
+
+}
+
+/** icons social meedia style */
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-media > i{
+    color: rgb(90, 7, 90);
+    font-size: 1.5rem;
+}
+
+/** footer style */
+.footer-page{
+    background-color:  rgb(152, 152, 152);
+}
+
+/**  style lightBox */
+.light-box{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: red ;
+
+}
