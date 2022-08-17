@@ -191,8 +191,8 @@ potionList.addEventListener("click", (event) => {
     for(let i in potionJson.potions){
       if(potionJson.potions[i].id == dataPotionId){
           console.log(potionJson.potions[i])
+          showLightBox()
       }
-      // console.log(potionJson.potions[i].id)
     }  
 
   }
