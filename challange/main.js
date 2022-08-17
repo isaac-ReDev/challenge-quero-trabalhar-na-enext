@@ -221,11 +221,15 @@ function desiredPotion(idPotion){
   <li class="potion-item " data-potion-id="${potionJson.potions[idPotion].id}">
    <img class="potion-img" src="${potionJson.potions[idPotion].image}" alt="potion"/>
    <div class="potion-description">
-    <p class="potion-name">${potionJson.potions[idPotion].name}</p>
-    <p>Use/effect:</p>
+    <b>${potionJson.potions[idPotion].name}</b>
+    <b><strong>Use/effect:</strong></b>
     <p>${potionJson.potions[idPotion].effect}</p>
+    <p> <b>ingredients:</b> </p>
     <span class="list-ingredients" >${returnIngredients(idPotion)}</span>
-    <p class="potin-price">$${potionJson.potions[idPotion].price}</p>
+    <p><b>Price:</b>
+      <p class="potin-price">${potionJson.potions[idPotion].price}</p>
+    </p>
+    <button class="btn-add-to-card"><b>Add To card </b></button>
    </div>
     
    </li>   
@@ -244,7 +248,7 @@ function returnIngredients(id ){
       // console.log(potionIngredients[i])
       // console.log(potionIngredients[i])
       NewUlOfIngredients.innerHTML += `
-        <li>${potionIngredients[i]}</li>
+        <li class="ingredients" >${potionIngredients[i]}</li>
       `
       
 

@@ -123,6 +123,9 @@ body{
 .potion-img{
     width: 300px;
 }
+.potin-price{
+    color: tomato;
+}
 
 
 
@@ -370,20 +373,79 @@ body{
 .light-box .ri-close-fill{
     position: fixed;
     text-align: center;
-    font-size: 3rem;
-    color: white;
-    border: white 1px dashed;
-    top: 10px;
-    left: 10px; 
+    font-size: 2rem;
+    color: black   ;
+    top: 95px;
+    left: 1000px;
+    z-index: 1; 
 }
 /**  tags inside lightbox */
 .show-here-a-potion{
     position: fixed;
     display: flex;
-    background-color: aliceblue;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
     width: 700px;
     height: 500px;
     margin-top: 100px;
+    color: black;
+    background-color: rgb(255, 255, 255);
 }
+
+.show-here-a-potion .potion-item{
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    gap: 10px;
+    width: 700px;
+    height: 450px;
+    padding-top:20px ;
+
+    
+}
+
+.show-here-a-potion .potion-img{
+    display: flex;
+    background-color: transparent;
+}
+
+.potion-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 10px;
+    background-color: transparent;
+
+}
+
+.list-ingredients{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ingredients{
+    text-align: left;
+    background-color: white;
+}
+
+/** btn add to card */
+
+.btn-add-to-card{
+    width: 150px;
+    height:40px;
+    padding: 3px;
+    background-color: rgb(243, 76, 47);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.btn-add-to-card:hover{
+    background-color: rgb(193, 55, 30);
+
+}
+
 
 
