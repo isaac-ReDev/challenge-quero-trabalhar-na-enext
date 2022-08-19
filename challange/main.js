@@ -4,6 +4,7 @@ const btnCloseLightBox = document.querySelector('[data-js-btn-close-lightBox]');
 
 const lightBox    = document.querySelector(".light-box");
 
+const BAG = []
 
 const potionJson = {
     "potions": {
@@ -200,6 +201,12 @@ potionList.addEventListener("click", (event) => {
           // console.log(potionJson.potions[i])
           desiredPotion(dataPotionId);
           showLightBox("flex")
+          //* function add To bag */
+          const btnAdd = document.querySelector(".btn-add-to-card");
+          btnAdd.addEventListener("click",() =>{
+            addToBag()
+          } )
+
       }
     }  
 
@@ -261,3 +268,11 @@ function returnIngredients(id ){
   return NewUlOfIngredients.outerHTML
 }
 
+function addToBag(){
+  const bag = document.querySelector(".bag-item-counter")
+  let bagLenght = BAG.length + 1;
+  BAG.push(1)
+
+  bag.innerHTML = `BAG:${bagLenght}`
+  
+}
