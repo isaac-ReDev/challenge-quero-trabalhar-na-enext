@@ -1,2 +1,2 @@
 # challenge-quero-trabalhar-na-enext
-## Esse projeto e um desafio que peguei em um repositório chamador <a href="https://github.com/f e seu objetivo  objetivo do repositório é testar seu conhecimento usando o desafio de trabalhos reais. lipefialho/frontend-challenges" target="_blank">frontend-challenges</a> e o principal objetivo do dele é testar seu conhecimento usando problemas de trabalhos reais.
+## Esse projeto e um desafio que peguei em um repositório chamador <a href="https://github.com/felipefialho/frontend-challenges" target="_blank">frontend-challenges</a> e o principal objetivo do dele é testar seu conhecimento usando problemas de trabalhos reais.
